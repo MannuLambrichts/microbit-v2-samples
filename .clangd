@@ -1,0 +1,20 @@
+CompileFlags:
+  Add:
+    - -I/Applications/ArmGNUToolchain/14.3.rel1/arm-none-eabi/include
+    - -I/Applications/ArmGNUToolchain/14.3.rel1/arm-none-eabi/arm-none-eabi/include
+    - -I/Applications/ArmGNUToolchain/14.3.rel1/arm-none-eabi/arm-none-eabi/include-fixed
+    - -I/Applications/ArmGNUToolchain/14.3.rel1/arm-none-eabi/arm-none-eabi/include/**
+    - -I/Applications/ArmGNUToolchain/14.3.rel1/arm-none-eabi/lib/gcc/arm-none-eabi/14.3.1/include
+    - --target=arm-none-eabi
+    - -mcpu=cortex-m4
+    - -mthumb
+    - -mfloat-abi=soft
+    - -fno-exceptions
+    - -fno-rtti
+    - -ffreestanding
+    - -nostdinc
+    - -nostdinc++
+  Remove:
+    - -stdlib=*
+    - -std=*
+  Compiler: /Applications/ArmGNUToolchain/14.3.rel1/arm-none-eabi/bin/arm-none-eabi-g++

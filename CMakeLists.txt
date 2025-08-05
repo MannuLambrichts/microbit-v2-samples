@@ -19,7 +19,7 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 # DEALINGS IN THE SOFTWARE.
-cmake_minimum_required(VERSION 3.6)
+cmake_minimum_required(VERSION 3.10...3.27)
 
 # include additional cmake
 include(utils/cmake/JSONParser.cmake)
@@ -35,6 +35,7 @@ endif()
 #
 set(CMAKE_C_COMPILER_WORKS 1)
 set(CMAKE_CXX_COMPILER_WORKS 1)
+
 
 
 #read our config file...
@@ -103,6 +104,9 @@ set(CMAKE_TOOLCHAIN_FILE "${TOOLCHAIN_FOLDER}/toolchain.cmake" CACHE PATH "toolc
 # required to force TOOLCHAIN settings...
 project(codal)
 enable_language(ASM)
+
+# Generate compile_commands.json for IntelliSense
+set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
 
 # include compiler flags overrides
 include(${TOOLCHAIN_FOLDER}/compiler-flags.cmake)

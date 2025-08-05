@@ -46,7 +46,7 @@
           "executable": "build/MICROBIT",
           "request": "attach",
           "type": "cortex-debug",
-          "servertype": "openocd",
+          "servertype": "pyocd",
           "configFiles": [
             "interface/cmsis-dap.cfg",
             "target/nrf52.cfg"

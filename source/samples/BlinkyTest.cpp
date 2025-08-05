@@ -178,20 +178,23 @@ void blinky()
     uBit.display.disable();
     uBit.io.row1.setDigitalValue(1);
     uBit.io.row2.setDigitalValue(1);
+    uBit.io.row3.setDigitalValue(1);
 
     while (1) {
 
         uBit.io.col1.setDigitalValue(0);
         uBit.io.col2.setDigitalValue(0);
+        uBit.io.col3.setDigitalValue(0);
 
         DMESG("ON");
         uBit.sleep(500);
 
         uBit.io.col1.setDigitalValue(1);
         uBit.io.col2.setDigitalValue(1);
+        uBit.io.col3.setDigitalValue(1);
 
         DMESG("OFF");
-        uBit.sleep(500);
+        uBit.sleep(1000);
     }
 }
 

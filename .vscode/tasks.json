@@ -28,6 +28,18 @@
 				"kind": "build",
 				"isDefault": false
 			}
-		}
+		},
+		{
+			"type": "shell",
+			"label": "CODAL flash",
+			"command": "./build_and_flash.sh",
+			"windows": {
+				"command": "./build_and_flash.sh"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			}
+		},
 	]
 }
