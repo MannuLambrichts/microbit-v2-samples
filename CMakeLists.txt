@@ -21,6 +21,8 @@
 # DEALINGS IN THE SOFTWARE.
 cmake_minimum_required(VERSION 3.6)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 # include additional cmake
 include(utils/cmake/JSONParser.cmake)
 include(utils/cmake/util.cmake)

@@ -8,7 +8,7 @@
 		{
 			"type": "shell",
 			"label": "CODAL build",
-			"command": "python build.py",
+			"command": "python build.py --clean && echo 'Uploading...' && rsync -vh MICROBIT.hex /Volumes/MICROBIT && echo 'Done'",
 			"windows": {
 				"command": "py build.py"
 			},
